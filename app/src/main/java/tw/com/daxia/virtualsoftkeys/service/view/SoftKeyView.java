@@ -12,8 +12,8 @@ import android.widget.ImageButton;
 import tw.com.daxia.virtualsoftkeys.common.SPFManager;
 import tw.com.daxia.virtualsoftkeys.service.ServiceFloating;
 
-import static tw.com.daxia.virtualsoftkeys.common.Link.GOOGLE_APP_PACKAGE_NAME;
-import static tw.com.daxia.virtualsoftkeys.common.Link.GOOGLE_PLAY_LINK;
+//import static tw.com.daxia.virtualsoftkeys.common.Link.GOOGLE_APP_PACKAGE_NAME;
+//import static tw.com.daxia.virtualsoftkeys.common.Link.GOOGLE_PLAY_LINK;
 
 /**
  * Created by daxia on 2017/4/26.
@@ -143,7 +143,9 @@ public abstract class SoftKeyView {
                             accessibilityService.performGlobalAction(AccessibilityService.GLOBAL_ACTION_TOGGLE_SPLIT_SCREEN);
                         }
                     }
-                } else if (v.getId() == IB_button_home.getId()) {
+                } 
+                /**
+                else if (v.getId() == IB_button_home.getId()) {
                     Intent intent = accessibilityService.getPackageManager().getLaunchIntentForPackage(GOOGLE_APP_PACKAGE_NAME);
                     if (intent != null) {
                         // We found the activity now start the activity
@@ -157,6 +159,7 @@ public abstract class SoftKeyView {
                         intent.setData(Uri.parse(GOOGLE_PLAY_LINK + GOOGLE_APP_PACKAGE_NAME));
                         accessibilityService.startActivity(intent);
                     }
+                    **/
 
                 } else if (v.getId() == IB_button_end.getId()) {
                     if (!reverseFunctionButton) {
